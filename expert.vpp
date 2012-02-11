@@ -1,0 +1,40 @@
+\begin{vdm_al}
+class Expert
+
+instance variables
+
+quali : set of Qualification;
+
+inv ExpertInv(quali);
+\end{vdm_al}
+
+\begin{vdm_al}--[Invariant]
+functions
+
+ExpertInv : set of Qualification -> bool
+ExpertInv(s) == s <> {};
+
+\end{vdm_al}
+
+
+\begin{vdm_al}--[Qualification]
+types
+ 
+public Qualification = <Mech> | <Chem> | <Bio> | <Elec>;
+\end{vdm_al}
+
+\begin{vdm_al}--[ExpertConstructor]
+operations
+
+public Expert: set of Qualification ==> Expert
+Expert(qs) ==
+  quali := qs
+pre ExpertInv(qs);
+\end{vdm_al}
+  
+\begin{vdm_al}
+public GetQuali: () ==> set of Qualification
+       GetQuali() == return quali;
+  
+end Expert
+\end{vdm_al}

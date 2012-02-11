@@ -1,0 +1,49 @@
+\documentstyle{llncs}
+
+\newcommand{\jml}{\textit{JML}}
+\newcommand{\vpp}{\textit{VDM++}}
+\newcommand{\vdm}{\textit{VDM-SL}}
+\newcommand{\java}{\textit{Java}}
+
+\begin{document}
+
+\title{
+Overture:\\
+Connecting between VDM++ and JML
+}
+
+\author{Carlos M. G. Vilhena\inst{1}}
+
+\institute{Engineering College of \AA rhus,\\
+Dalgas Avenue, DK-8000 \AA rhus, Denmark}
+
+\maketitle
+
+\begin{abstract}
+This paper presents an exploration of the possibilities for automatic translation between \vpp\ and \jml\ in both directions, which is being developed for the Overture platform.\\
+It is believed that this project will be useful from a teaching perspective enabling \vpp\ to act as a front-end for contract-based programming and the possible usage of tool support both from \vpp\ and \jml.\\
+This project contains a theoretical exploration of the subsets where this automatic translation is possible, describing in detail all the limitations encountered.\\
+The development of a prototype proof-of-concept implementation of this connection is being carried through, and in a latter stage this prototype will be built on top of the \textit{Eclipse} platform as a part of the \textit{Overture Tool}.
+\end{abstract}
+
+\section{Introduction}
+
+In order to establish a bidirectional connection between \vpp\ and \jml\ it is necessary to explain its purposes and limitations. Indeed, it is believe that this connection can bring possible advantages to software developers wiling to use it.\\
+From a tool support perspective, it will be possible to take advantage of the tool support available from both \vpp\ and \jml\ sides, moving the specifications from one way to another.\\
+Concerning the teaching perspective. this connection can be seen as a bridge between \vpp\ and \jml\ in both directions. In a given program where one starts to teach Java, and then would like to teach \vpp\ can start using \jml\ assertions inside Java programs, and thus move their specifications to \vpp.\\
+On the other hand, it is possible to use \vpp\ as a front-end for contract-based programming. If one starts teaching \vpp\ and then would like to teach Java can use this connection to move \vpp\ specifications to \jml\ specifications and then start teaching Java.\\
+However, such a connection has some limitations that must be taken into account. There are semantic differences between \vpp\ and \jml\ in Object-Oriented features such as inheritance. Although \vpp\ allows multiple class inheritance, \jml\ does not allow multiple class inheritance. This means that the semantic value of multiple inheritance in \vpp\ will be lost when moving to \jml.\\ 
+Furthermore, there are a number of other syntactic and semantic differences between those two specification languages that affects the essence of this connection and therefore are introduced as limitations of its usage.\\
+
+The implementation of this connection comprehends a number of steps that are about to be started. First of all, this connection consists in two mappings: one from \jml\ to \vpp\ and other from \vpp\ to \jml. Considering the first mapping, a \jml\ parser is being created, in order to parse \jml\ input files and connect them to \vpp, using this tool. Together with the parser, an abstract syntax of \jml\ is being developed using \vdm\ types in order to use an already existing tool called \textit{ASTGEN}, which will generate \vpp\ classes and Java interfaces representing the types written in the abstract syntax. Thus, the parser together with the generated files from \textit{ASTGEN} will parse the input \jml\ files to an intermediate structure, called abstract syntax tree, which will then be mapped to the \vpp\ syntax tree in order to obtain a \vpp\ representation of the \jml\ input files. In the other way around, an already existing \vpp\ parser will be used to parse \vpp\ input files to map them to \jml\ using the same principles explained above.\\
+Considering that \jml\ offers a large variety of specification approaches (class, abstract class and interface), it is important to consider which one should be used to sustain this connection, and how should such choice be applied in a future connection of the \jml\ specifications to the \java\ code associated. With respect to this project, \java\ classes were chosen to sustain \jml\ assertions and the connection between those assertions and a possible implementation will be made using a refinement clause.\\
+
+After the conclusion of this work, it is expected to include the capability of connecting between the VDM++ and the JML in the Overture Tool, in a bidirectional way. Besides the connection itself, it is also expected to have a solid theoretical background sustaining the referred connection, and a detailed exploration of the possible subsets in which that connection is possible.\\
+
+
+\end{document}
+
+
+
+
+

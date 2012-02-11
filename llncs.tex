@@ -1,0 +1,1107 @@
+\documentstyle[llncsdoc]{llncs}
+%
+\newfont{\titelfont}{cmr10 scaled 1728}
+\newfont{\titelbffont}{cmbx10 scaled 2074}
+\newfont{\titelbigfont}{cmr10 scaled 2488}
+%
+\begin{document}
+\thispagestyle{empty}
+\rule{\textwidth}{1pt}
+\vspace{2pt}
+\begin{flushright}
+\begin{tabular}{@{}l}
+{\titelbigfont Overture}\\[10pt]
+{\titelbigfont Connecting between VDM++}\\[7pt]
+{\titelbigfont and JML}\\[7pt]
+\end{tabular}
+\end{flushright}
+\rule{\textwidth}{1pt}
+\vfill
+\begin{flushright}
+\begin{tabular}{@{}l}
+{\titelfont Springer-Verlag}\\[8pt]
+{\titelfont Berlin\enspace Heidelberg\enspace New\kern0.1em York}\\[5pt]
+{\titelfont London\enspace Paris\enspace Tokyo}\\[5pt]
+{\titelfont Hong Kong\enspace Barcelona\enspace Budapest}
+\end{tabular}
+\end{flushright}
+\newpage
+%
+\section*{For further information please contact us:}
+%
+\begin{flushleft}
+\begin{tabular}{l@{\quad}l@{\hspace{3mm}}l}
+$\bullet$  & \multicolumn{2}{l}{\bf Springer-Verlag Heidelberg}\\[1mm]
+& \multicolumn{2}{l}{Department New Technologies/Product Development}\\
+& \multicolumn{2}{l}{Springer-Verlag, Postfach 105280, W-6900 Heidelberg
+1, FRG}\\[0.5mm]
+ & Telex:     & 461723\\
+ & Telefax:   & (06221)487648\\
+ &bitnet/EARN:& SPRINGER @ DHDSPRI6
+\end{tabular}
+\end{flushleft}
+\rule{\textwidth}{1pt}
+%
+\section*{Acceptable formats of your disk/magnetic tape and output:}
+%
+The following formats are acceptable: 5.25$^{\prime\prime}$ diskette
+MS-DOS, 5.25$^{\prime\prime}$ CP/M, 3.5$^{\prime\prime}$ diskette
+MS-DOS, 3.5$^{\prime\prime}$ diskette Apple MacIntosh, 9-track 1600
+bpi magnetic tape VAX/VMS, 9-track 1600 bpi magnetic tape ANSI with
+label, SUN-Streamer Tape.
+
+Once you have completed your work using this macro package,
+please submit your own printout of the {\it final
+version together with the disk or magnetic tape}, containing your
+\LaTeX{} input (source) file und the final DVI-file and make sure
+that the text is {\it identical in both cases.}
+
+\bigskip
+This macro package, as well as all other macro packages and style
+files that Springer distributes, are also available through our
+mailserver
+
+SVSERV @ DHDSPRI6.bitnet
+%
+\newpage
+\tableofcontents
+\newpage
+%
+\section{Introduction}
+%
+Authors wishing to code their contribution
+with \LaTeX{}, as well as those who have already coded with \LaTeX{},
+will be provided with a style file that will give the text the
+desired layout. Authors are requested to
+adhere strictly to these instructions; {\it the style
+file must not be changed}.
+
+The text output area is automatically set within an area of
+12.2\,cm horizontally  and 19.3\,cm vertically.
+
+If you are already familiar with \LaTeX{}, then the
+LLNCS style file should not give you any major difficulties.
+This style file will change the layout to the required LLNCS style
+(it will for instance  define the layout of \verb|\section|).
+We had to invent some extra commands,
+which are not provided by \LaTeX{} (e.g.\
+\verb|\institute|, see also Sect.\,\ref{contbegin})
+
+For the main body of the paper (the text) you
+should use the commands of the standard \LaTeX{} ``article'' style.
+Even if you are familiar with those commands, we urge you to read
+this entire documentation thoroughly. It contains many suggestions on
+how to use our commands properly; thus  your paper
+will be formatted exactly to LLNCS standard.
+For the input of the references at the end of your contribution,
+please follow our instructions given in Sect.\,\ref{refer} References.
+
+The majority of these hints are not specific for LLNCS; they may improve
+your use of \LaTeX{} in general.
+Furthermore, the documentation provides suggestions about the proper
+editing and use
+of the input files (capitalization, abbreviation etc.) (see
+Sect.\,\ref{refedit} How to Edit Your Input File).
+%
+\section{How to Proceed}
+%
+Please insert the enclosed diskette or tape into your computer. You will
+find the following files:
+\begin{flushleft}
+\begin{tabular}{@{}p{2.5cm}l}
+{\it llncs.doc}  & General instructions (this document),\\
+        & {\it llncs.doc} means llncs latex documentation\\
+{\it llncs.dem}  & An example showing how to code the text\\
+{\it llncs.sty}  & Style file to invoke  \LaTeX{}
+\end{tabular}
+\end{flushleft}
+You have to run each file twice with: \verb|latex file.name|.
+%
+\subsection{How to Invoke the LLNCS Style File}
+%
+The LLNCS style file is an adaptation of the \LaTeX{} ``article'' style.
+Therefore you may use all ``article'' style commands to prepare your
+manuscript.
+LLNCS style is invoked by replacing ``article'' by ``llncs'' in the
+first
+line of your document:
+\begin{verbatim}
+\documentstyle{llncs}
+%
+\begin{document}
+  <Your contribution>
+\end{document}
+\end{verbatim}
+%
+\subsection{Contributions Already  Coded with \protect\LaTeX{} without
+the \protect\\ LLNCS Style File}
+%
+If your file is already coded with \LaTeX{} you can easily
+adapt it a posteriori to LLNCS style.
+
+Please refrain from using any \LaTeX{} or \TeX{} commands
+that affect the layout or formatting of your document (i.e. commands
+like \verb|\textheight|, \verb|\vspace|, \verb|\hoffset| etc.).
+There may nevertheless be exceptional occasions on which to
+use some of them.
+
+The LLNCS style has been carefully designed to produce the right layout
+from your \LaTeX{} input. If there is anything specific you would like
+to do and  for which the style file does not provide a command,
+{\em please contact us.\/}
+%
+\section{General Rules for Coding Formulas}
+%
+With mathematical formulas you may proceed as described
+in Sect.\,3.3 of the {\em \LaTeX{} User's Guide \& Reference
+Manual\/} by Leslie Lamport (1986), Addison-Wesley Publishing
+Company, Reading, Mass.
+
+Equations are automatically numbered sequentially throughout your
+contribution using arabic numerals in parentheses on the right-hand
+side.
+
+When you are working in math mode everything is typeset in italics.
+Sometimes you need to insert non-mathematical elements (e.g.\
+words or phrases). Such insertions should be coded in  roman
+(with \verb|\mbox|) as illustrated in the following example:
+\begin{flushleft}
+{\it Sample Input}
+\end{flushleft}
+\begin{verbatim}
+\begin{equation}
+  \left(\frac{a^{2} + b^{2}}{c^{3}} \right) = 1 \quad
+  \mbox{ if } c\neq 0 \mbox{ and if } a,b,c\in \bbbr \enspace .
+\end{equation}
+\end{verbatim}
+{\it Sample Output}
+\begin{equation}
+  \left(\frac{a^{2} + b^{2}}{c^{3}} \right) = 1 \quad
+  \mbox{ if } c\neq 0 \mbox{ and if } a,b,c\in \bbbr \enspace .
+\end{equation}
+
+If you wish to start a new paragraph immediately after a displayed
+equation, insert a blank line so as to produce the required
+indentation. If there is no new paragraph either do not insert
+a blank line or code \verb|\noindent| immediately before
+continuing the text. Titles have no end punctuation.
+
+Please punctuate a displayed equation in the same way as other
+ordinary  text but with an \verb|\enspace| before end punctuation.
+
+Note that the sizes of the parentheses or other delimiter
+symbols used in equations should ideally match the height of the
+formulas being enclosed. This is automatically taken care of by
+the following \LaTeX{} commands:\\[2mm]
+\verb|\left(| or \verb|\left[| and
+\verb|\right)| or \verb|\right]|.
+%
+\subsection{Italic and Roman Type in Math Mode}
+%
+\begin{alpherate}
+\item
+In math mode \TeX{} and \LaTeX{} treat all letters as though they
+were mathematical or physical variables, hence they are typeset in
+italics. However, for certain components of formulas, like short texts,
+this would be incorrect and therefore coding in  roman is required.
+Roman should also be used for
+subscripts and superscripts {\it in formulas\/} where these are
+merely labels and not in themselves variables,
+e.g.\ $T_{\rm eff}$ \ not \ $T_{eff}$,
+$T_{\rm K}$ \ not \ $T_K$ (K = Kelvin),
+$m_{\rm e}$ \ not \ $m_e$ (e = electron).
+However, do not code for roman
+if the sub/superscripts represent variables,
+e.g.\ $\sum_{i=1}^{n} a_{i}$.
+\item
+Please ensure that {\em physical units\/} (e.g.\ pc, erg s$^{-1}$
+K, cm$^{-3}$, W m$^{-2}$ Hz$^{-1}$, m kg s$^{-2}$ A$^{-2}$) and
+{\it abbreviations} such as Ord, Var, GL, SL, sgn, const.\
+are always set in roman type. To ensure
+this use the \verb|\rm| command: \verb|{\rm Hz}|.
+On p.\ 46 of the {\em \LaTeX{} User's Guide \& Reference
+Manual\/} by Leslie Lamport you will find the names of
+common mathe\-matical functions, such as log, sin, exp, max and sup.
+These should be coded as \verb|\log|,
+\verb|\sin|, \verb|\exp|, \verb|\max|, \verb|\sup|
+and will appear in roman.
+\item
+Chemical symbols and formulas should be coded for roman,
+e.g.\ Fe not $Fe$, H$_2$O not {\em H$_2$O\/}.
+\item
+Familiar foreign words and phrases, e.g.\ et al.,
+a priori, in situ, brems\-strah\-lung, eigenvalues should not be
+italicized.
+\end{alpherate}
+%
+\section{How to Edit Your Input (Source) File}
+\label{refedit}
+%
+\subsection{Headings}
+%
+All words in  headings should be capitalized except for
+conjunctions,  prepositions
+(e.g.\ on, of, by, and, or, but,  from, with, without, under)
+and definite and indefinite articles (the, a, an) unless they appear at
+the beginning. Formula letters must be typeset as in the text.
+%
+\subsection{Capitalization and Non-capitalization}
+%
+\begin{alpherate}
+\item
+The following should always be capitalized:
+\begin{itemize}
+\item
+Headings (see preceding Sect.\,4.1)
+\item
+Abbreviations and expressions
+in the text such as  Fig(s)., Table(s), Sect(s)., Chap(s).,
+Theorem, Corollary, Definition etc. when used with numbers, e.g.\
+Fig.\,3, Table\,1, Theorem 2.
+\end{itemize}
+Please follow the special rules in Sect.\,4.3 for referring to
+equations.
+\item
+The following should {\it not\/} be capitalized:
+\begin{itemize}
+\item
+The words  figure(s), table(s), equation(s),
+theorem(s) in the text when used without an accompanying number
+\item
+Figure legends and table captions except for names and
+abbreviations.
+\end{itemize}
+\end{alpherate}
+%
+\subsection{Abbreviation of Words}
+%
+\begin{alpherate}
+\item
+The following {\it should} be abbreviated when they appear in running
+text {\it unless\/} they come at the beginning of a sentence: Chap.,
+Sect., Fig.; e.g.\ The results are depicted in Fig.\,5. Figure 9 reveals
+that \dots .\\
+{\it Please note\/}: Equations should usually be referred to solely by
+their number in parentheses: e.g.\ (14). However, when the reference
+comes at the beginning of a sentence, the unabbreviated word
+``Equation'' should be used: e.g.\ Equation (14) is very important.
+However, (15) makes it clear that \dots .
+\item
+If abbreviations of names or concepts are used
+throughout the text, they should be defined at first occurrence,
+e.g.\ Plurisubharmonic (PSH) Functions, Strong Optimization (SOPT)
+Problem.
+\end{alpherate}
+%
+\section{How to Code the Beginning of Your Contribution}
+\label{contbegin}
+%
+The title of your contribution should be coded as follows:
+\begin{verbatim}
+\title{<Your contribution title>}
+\end{verbatim}
+All words in  titles should be capitalized except for
+conjunctions, prepositions
+(e.g.\ on, of, by, and, or, but,  from, with, without, under)
+and definite and indefinite articles (the, a, an) unless they appear at
+the beginning. Formula letters must be typeset as in the text.
+Titles have no end punctuation.
+
+If a long \verb|\title| must be divided please use the
+code  \verb|\\| (for new line).\\[6mm]
+Now the name(s) of the authors(s) must be given:
+\begin{verbatim}
+\author{<author(s) name(s)>}
+\end{verbatim}
+Numbers referring to different addresses are
+to be attached to each author.
+If you have done this correctly, the entry now reads, for example:
+\begin{verbatim}
+\author{Ivar Ekeland\inst{1} and Roger Temam\inst{2}}
+\end{verbatim}
+The first name\footnote{Other initials are optional
+and may be inserted if this is the usual
+way of writing your name, e.g.\ Alfred J.~Holmes, E.~Henry Green.}
+is followed by the surname.
+
+If there is more than one author, the order is up to you.
+However, if there are more than two authors, you must separate the names
+by commas. If the authors have different affiliations,
+each name has to be followed by:
+\begin{verbatim}
+\inst{<no>}
+\end{verbatim}
+\newpage
+Next the address(es) of institute(s), company etc. is (are) required.
+If there is more than one address, the entries are numbered
+automatically with \verb|\and|, in the order in which you type them.
+Please make sure that the numbers match those placed next to
+to the authors' names.
+\begin{verbatim}
+\institute{<name of an institute>
+\and <name of the next institute>
+\and <name of the next institute>}
+\end{verbatim}
+Unlike usual \LaTeX{} the \verb|\and| command is used with the
+\verb|\institute| and not with the \verb|\author| command.
+
+\medskip
+If footnotes are needed in \verb|\title| please code
+(immediately after the word where the footnote
+indicator should be placed):
+\begin{verbatim}
+\thanks{<text>}
+\end{verbatim}
+\verb|\thanks| may only appear in \verb|\title|, \verb|\author|
+and \verb|\institute| (see below) to footnote anything.
+
+\medskip\noindent
+The command
+\begin{verbatim}
+\maketitle
+\end{verbatim}
+formats the complete heading of your article. If you leave
+it out the work done so far will produce {\bf no} text,
+see {\it Sample Input\/} on p.~\pageref{samppage}.
+
+Then the abstract should follow. Please refer to the
+demonstration file {\tt llncs.dem} for an example or
+to the {\it Sample Input\/} like above.
+%
+\section{How to Code Your Text}
+%
+The contribution title and all headings should be capitalized
+except for conjunctions, prepositions
+(e.g.\ on, of, by, and, or, but,  from, with, without, under)
+and definite and indefinite articles (the, a, an) unless they appear at
+the beginning. Formula letters must be typeset as in the text.
+
+Headings will be automatically numbered by the following codes.\\[2mm]
+{\it Sample Input}
+\begin{verbatim}
+\section{This is a First-Order Title}
+\subsection{This is a Second-Order Title}
+\subsubsection{This is a Third-Order Title.}
+\paragraph{This is a Fourth-Order Title.}
+\end{verbatim}
+\verb|\section| and \verb|\subsection| have no end punctuation.\\
+\verb|\subsubsection| and  \verb|\paragraph|
+need to be punctuated at the end.
+
+In addition to the above-mentioned headings your text may be structured
+by subsections indicated by run-in headings (theorem-like environments).
+All the theorem-like environments are numbered automatically
+throughout the sections of your file.
+If you call lemma once, this will be numbered 1; if corollary follows,
+this will be numbered 2; if you then call lemma again, this will be
+numbered 3.
+\newpage
+But in case you want to reset this counter at 1 in each section,
+please give the  document style option \verb|envcountreset|:
+\begin{verbatim}
+\documentstyle[envcountreset]{llncs}
+\end{verbatim}
+
+\vspace{.5cm}\noindent
+The following possibilities for run-in headings are available:
+\begin{flushleft}
+\verb|\begin{lemma} Text of the lemma \end{lemma}|\quad (see Output
+Sample 1)\\[2mm]
+%
+\verb|\begin{lemma}[additional explanation of lemma] Text of
+lemma \end{lemma}| \quad (see Output Sample 2)\\[2mm]
+%
+\verb|\begin{lemma}(overriding automatic numbering.) Text of the lemma
+\end{lemma}| \quad (see Output Sample 3)\\[2mm]
+%
+\verb|\begin{lemma}(x)[additional explanation of lemma] Text of
+lemma\end{lemma}| \quad (see Output Sample 4)\\[2mm]
+%
+\verb|\begin{lemma}* Text of lemma \end{lemma}| \quad (see Output
+Sample 5)\\[2mm]
+%
+\verb|\begin{lemma}*[additional explanation of lemma] Text of
+lemma\end{lemma}| \quad (see Output Sample 6)
+\end{flushleft}
+%
+{\it Output Sample 1}
+\begin{lemma}Text of lemma\end{lemma}
+%
+{\it Output Sample 2}
+\begin{lemma}[additional explanation of lemma] Text of lemma\end{lemma}
+%
+{\it Output Sample 3}
+\begin{lemma}(overriding automatic numbering.) Text of lemma\end{lemma}
+%
+{\it Output Sample 4}
+\begin{lemma}(x)[additional explanation of lemma] Text of
+lemma\end{lemma}
+%
+{\it Output Sample 5}
+\begin{lemma}* Text of lemma\end{lemma}
+%
+{\it Output Sample 6}
+\begin{lemma}*[additional explanation of lemma] Text of lemma\end{lemma}
+\noindent
+The following variety of run-in headings are at your disposal:
+\begin{alpherate}
+\item
+{\bf Bold} run-in headings with italicized text
+as built-in environments:
+\begin{verbatim}
+\begin{proposition} <text> \end{proposition}
+\begin{corollary} <text> \end{corollary}
+\begin{lemma} <text> \end{lemma}
+\begin{theorem} <text> \end{theorem}
+\end{verbatim}
+\item
+The following must generally appear as {\it italic} run-in heading:
+\begin{verbatim}
+\begin{proof} <text>    \qed    \end{proof}
+\end{verbatim}
+\item
+Further {\it italic} or {\bf bold} run-in headings may also occur:
+\begin{verbatim}
+\begin{definition} <text> \end{definition}
+\begin{example} <text> \end{example}
+\begin{remark} <text> \end{remark}
+\begin{exercise} <text> \end{exercise}
+\begin{problem} <text> \end{problem}
+\begin{solution} <text> \end{solution}
+\begin{note} <text> \end{note}
+\begin{question} <text> \end{question}
+\end{verbatim}
+\end{alpherate}
+%
+\subsubsection*{Defining Your Own Environments.}
+%
+You can define additional environments using the command
+\verb|\newstytheorem| which has five parameters. The first is the name
+your environment should have (e.g.\ \verb|conjecture|).
+After this follows the
+font family used for this heading (please use only \verb|\bf| for bold
+or \verb|\it| for italic) and the font family to use for the text of
+this new environment (e.g.\ \verb|\it| or \verb|\rm|). Then the name of
+an already known environment should be given in brackets (e.g.\
+\verb|[theorem]|). Your new environment will be numbered like the old
+one. Finally comes the real text of the new run-in heading (e.g.\
+\verb|Conjecture|).\\
+Sample definition:
+\begin{verbatim}
+\newstytheorem{conjecture}{\bf}{\it}[theorem]{Conjecture}
+\end{verbatim}
+\newstytheorem{conjecture}{\bf}{\it}[theorem]{Conjecture}
+Use of that definition:
+\begin{verbatim}
+\begin{conjecture} <text> \end{conjecture}
+\end{verbatim}
+e.g.
+\begin{verbatim}
+\begin{conjecture} It is clear that ...\end{conjecture}
+\end{verbatim}
+Its output:
+\begin{conjecture}
+It is clear that \dots
+\end{conjecture}
+%
+\noindent
+{\it Sample Input}
+\label{samppage}
+\begin{verbatim}
+\title{Hamiltonian Mechanics}
+
+\author{Ivar Ekeland\inst{1} and Roger Temam\inst{2}}
+
+\institute{Princeton University, Princeton NJ 08544, USA
+\and
+Universit\'{e} de Paris-Sud,
+Laboratoire d'Analyse Num\'{e}rique, B\^{a}timent 425,\\
+F-91405 Orsay Cedex, France}
+
+\maketitle
+%
+\begin{abstract}
+This paragraph shall summarize the contents of the paper
+in short terms.
+\end{abstract}
+%
+\section{Fixed-Period Problems: The Sublinear Case}
+%
+With this chapter, the preliminaries are over, and we begin the
+search for periodic solutions \dots
+%
+\subsection{Autonomous Systems}
+%
+In this section we will consider the case when the Hamiltonian
+$H(x)$ \dots
+%
+\subsubsection*{The General Case: Nontriviality.}
+%
+We assume that $H$ is
+$\left(A_{\infty}, B_{\infty}\right)$-subqua\-dra\-tic
+at infinity, for some constant \dots
+%
+\paragraph{Notes and Comments.}
+The first results on subharmonics were \dots
+%
+\begin{proposition}
+Assume $H'(0)=0$ and $ H(0)=0$. Set \dots
+\end{proposition}
+\begin{proof}[of proposition]
+Condition (8) means that, for every $\delta'>\delta$, there is
+some $\varepsilon>0$ such that \dots \qed
+\end{proof}
+%
+\begin{example}[\rm (External forcing)]
+Consider the system \dots
+\end{example}
+\begin{corollary}
+Assume $H$ is $C^{2}$ and
+$\left(a_{\infty}, b_{\infty}\right)$-subquadratic
+at infinity. Let \dots
+\end{corollary}
+\end{verbatim}
+\newpage
+\begin{verbatim}
+\begin{lemma}
+Assume that $H$ is $C^{2}$ on $\bbbr^{2n}\backslash \{0\}$
+and that $H''(x)$ is \dots
+\end{lemma}
+\begin{theorem}[(Ghoussoub-Preiss)]
+Let $X$ be a Banach Space and $\Phi:X\to\bbbr$ \dots
+\end{theorem}
+\begin{definition}
+We shall say that a $C^{1}$ function $\Phi:X\to\bbbr$
+satisfies \dots
+\end{definition}
+\end{verbatim}
+{\it Sample Output\/} (follows on the next page together with
+examples of the above run-in headings)
+%
+\title{Hamiltonian Mechanics}
+
+\author{Ivar Ekeland\inst{1} and Roger Temam\inst{2}}
+
+\institute{Princeton University, Princeton NJ 08544, USA
+\and
+Universit\'{e} de Paris-Sud,
+Laboratoire d'Analyse Num\'{e}rique, B\^{a}timent 425,\\
+F-91405 Orsay Cedex, France}
+
+\maketitle
+%
+\begin{abstract}
+This paragraph shall summarize the contents of the paper
+in short terms.
+\end{abstract}
+%
+\section*{1\quad Fixed-Period Problems: The Sublinear Case}
+%
+With this chapter, the preliminaries are over, and we begin the search
+for periodic solutions \dots
+%
+\subsection*{1.1\quad Autonomous Systems}
+%
+In this section we will consider the case when the Hamiltonian
+$H(x)$ \dots
+%
+\subsubsection*{The General Case: Nontriviality.}
+%
+We assume that $H$ is
+$\left(A_{\infty}, B_{\infty}\right)$-subqua\-dra\-tic at
+infinity, for some constant \dots
+%
+\paragraph{Notes and Comments.}
+The first results on subharmonics were \dots
+%
+\begin{proposition}
+Assume $H'(0)=0$ and $ H(0)=0$. Set \dots
+\end{proposition}
+\begin{proof}[of proposition]
+Condition (8) means that, for every $\delta'>\delta$, there is
+some $\varepsilon>0$ such that \dots \qed
+\end{proof}
+%
+\begin{example}[\rm (External forcing)]
+Consider the system \dots
+\end{example}
+\begin{corollary}
+Assume $H$ is $C^{2}$ and
+$\left(a_{\infty}, b_{\infty}\right)$-subquadratic
+at infinity. Let \dots
+\end{corollary}
+\begin{lemma}
+Assume that $H$ is $C^{2}$ on $\bbbr^{2n}\backslash \{0\}$
+and that $H''(x)$ is \dots
+\end{lemma}
+\begin{theorem}[(Ghoussoub-Preiss)]
+Let $X$ be a Banach Space and $\Phi:X\to\bbbr$ \dots
+\end{theorem}
+\begin{definition}
+We shall say that a $C^{1}$ function $\Phi:X\to\bbbr$ satisfies \dots
+\end{definition}
+%
+\section{Fine Tuning of the Text}
+%
+The following should be used to improve the readability of the text:
+\begin{flushleft}
+\begin{tabular}{@{}p{.19\textwidth}p{.79\textwidth}}
+\verb|\,|   & a thin space, e.g.\ between numbers or between units
+              and num\-bers; a line division will not be made
+              following this space\\
+\verb|--|   & en dash; two strokes, without a space at either end\\
+\verb*| -- |& en dash; two strokes, with  a space at either end\\
+\verb|-|    & hyphen; one stroke, no space at either end\\
+\verb|$-$|  & minus, in the text {\em only} \\[8mm]
+{\em Input} & \verb|21\,$^{\circ}$C etc.,|\\
+            &  \verb|Dr h.\,c.\,Rockefellar-Smith \dots|\\
+            & \verb|20,000\,km and  Prof.\,Dr Mallory \dots|\\
+            & \verb|1950--1985 \dots|\\
+            & \verb|this -- written on a computer -- is now printed|\\
+            & \verb|$-30$\,K \dots|\\[3mm]
+{\em Output}& 21\,$^{\circ}$C etc., Dr h.\,c.\,Rockefellar-Smith \dots\\
+            & 20,000\,km and  Prof.\,Dr Mallory \dots\\
+            & 1950--1985 \dots\\
+            & this -- written on a computer -- is now printed\\
+            & $-30$\,K \dots
+\end{tabular}
+\end{flushleft}
+%
+\section {Special Typefaces}
+%
+Normal type (roman) need not be coded. {\it Italic}
+(not {\sl slanted}) or, if necessary, {\bf boldface}
+should be used for emphasis in the text.
+\begin{flushleft}
+\begin{tabular}{@{}p{.19\textwidth}p{.79\textwidth}}
+\verb|{\it Text}|   & {\it Italicized Text}\\
+\verb|{\em Text}|   & {\em Emphasized Text}\\
+ & {\it If you would like to emphasize a {\em definition} within an
+   italicized text (e.g.\ of a {\em theorem)} you should code the
+   expression to be emphasized by} \verb|\em|.\\
+\verb|{\bf Text}|   & {\bf Important Text}\\
+\verb|\vec{Symbol}| & Vectors may only appear in math mode. The default
+   \LaTeX{} vector symbol has been adapted to LLNCS conventions.\\
+ & \verb|$\vec{A \times B\cdot C}| yields $\vec{A\times B\cdot C}$\\
+ & \verb|$\vec{A}^{T} \otimes \vec{B} \otimes \vec{\hat{D}}$|\\
+ & yields $\vec{A}^{T} \otimes \vec{B} \otimes \vec{\hat{D}}$
+\end{tabular}
+\end{flushleft}
+%
+\section {Footnotes}
+%
+Footnotes within the text should be coded:
+\begin{verbatim}
+\footnote{Text}
+\end{verbatim}
+{\it Sample Input}
+\begin{flushleft}
+Text with a footnote\verb|\footnote{The footnote is automatically
+numbered.}| and text continues \dots
+\end{flushleft}
+{\it Sample Output}
+\begin{flushleft}
+Text with a footnote\footnote{The footnote is automatically numbered.}
+and text continues \dots
+\end{flushleft}
+%
+\section {Lists}
+%
+Please code lists as described below:\\[2mm]
+{\it Sample  Input}
+\begin{verbatim}
+\begin{enumerate}
+  \item First item
+  \item Second item
+  \begin{enumerate}
+    \item First nested item
+    \item Second nested item
+  \end{enumerate}
+  \item Third item
+\end{enumerate}
+\end{verbatim}
+{\it Sample Output}
+ \begin{enumerate}
+\item First item
+\item Second item
+  \begin{enumerate}
+    \item First nested item
+    \item Second nested item
+  \end{enumerate}
+\item Third item
+\end{enumerate}
+%
+\section {Figures}
+%
+Figure legends should be inserted after (not in)
+the  paragraph in which the figure is first mentioned.
+They will be numbered automatically.
+
+{\it The figures\/} (line drawings and those containing halftone inserts
+as well as halftone figures) {\it should not be pasted into your
+laserprinter output}. They should be enclosed separately in camera-ready
+form (original artwork, glossy prints, photographs and/or slides). The
+lettering should be suitable for reproduction, and after reduction the
+height of capital letters should be at least
+1.8\,mm and not more than 2.5\,mm.
+Check that lines and other details are uniformly black and
+that the lettering on figures is clearly legible.
+
+To leave the desired amount of space for the height of
+your figures, please use the coding described below.
+As can be seen in the output, we will automatically
+provide 1\,cm space above and below the figure,
+so that you should only leave the space equivalent to the size of the
+figure itself. Please note that ``\verb|x|'' in the following
+coding stands for the actual height of the figure:
+\begin{verbatim}
+\begin{figure}
+\vspace{x cm}
+\caption[ ]{...text of caption...}          (Do type [ ])
+\end{figure}
+\end{verbatim}
+\begin{flushleft}
+{\it Sample Input}
+\end{flushleft}
+\begin{verbatim}
+\begin{figure}
+\vspace{2.5cm}
+\caption{This is the caption of the figure displaying a white
+eagle and a white horse on a snow field}
+\end{figure}
+\end{verbatim}
+\begin{flushleft}
+{\it Sample Output}
+\end{flushleft}
+\begin{figure}
+\vspace{2.5cm}
+\caption{This is the caption of the figure displaying a white eagle and
+a white horse on a snow field}
+\end{figure}
+%
+\section{Tables}
+%
+Table captions should be treated
+in the same way as figure legends, except that
+the table captions appear {\it above} the tables. The  tables
+will be numbered automatically.
+%
+\subsection{Tables Coded with \protect\LaTeX{}}
+%
+Please use the following coding:\\[2mm]
+{\it Sample Input}
+\begin{verbatim}
+\begin{table}
+\caption{This is the example table taken out of {\it The
+\TeX{}book,} p.\,246}
+\vspace{2pt}
+\begin{tabular}{r@{\quad}rl}
+\hline
+\multicolumn{1}{l}{\rule{0pt}{12pt}
+                Year}&\multicolumn{2}{l}{World population}\\[2pt]
+\hline\rule{0pt}{12pt}
+8000 B.C.  &     5,000,000& \\
+  50 A.D.  &   200,000,000& \\
+1650 A.D.  &   500,000,000& \\
+1945 A.D.  & 2,300,000,000& \\
+1980 A.D.  & 4,400,000,000& \\[2pt]
+\hline
+\end{tabular}
+\end{table}
+
+Before continuing your text you need an empty line. \dots
+\end{verbatim}
+{\it Sample Output}
+\begin{table}
+\caption{This is the example table taken out of {\it The
+\TeX{}book,} p.\,246}
+\vspace{2pt}
+\begin{tabular}{r@{\quad}rl}
+\hline
+\multicolumn{1}{l}{\rule{0pt}{12pt}
+                Year}&\multicolumn{2}{l}{World population}\\[2pt]
+\hline\rule{0pt}{12pt}
+8000 B.C.  &     5,000,000& \\
+  50 A.D.  &   200,000,000& \\
+1650 A.D.  &   500,000,000& \\
+1945 A.D.  & 2,300,000,000& \\
+1980 A.D.  & 4,400,000,000& \\[2pt]
+\hline
+\end{tabular}
+\end{table}
+
+Before continuing your text you need an empty line. \dots
+
+\vspace{3mm}
+For further information you will find a complete description of
+the tabular environment
+on p.~63~ff. and p.~182 of the {\em \LaTeX{} User's Guide \& Reference
+Manual\/} by Leslie Lamport.
+%
+\subsection{Tables Not Coded with \protect\LaTeX{}}
+%
+If you do not wish to code your table using \LaTeX{}
+but prefer to have it reproduced separately,
+proceed as for figures and use the following coding:\\[2mm]
+{\it Sample Input}
+\begin{verbatim}
+\begin{table}
+\caption{text of your caption}
+\vspace{x cm}     % the actual height needed for your table
+\end{table}
+\end{verbatim}
+%
+\subsection{Signs and Characters}
+%
+\subsubsection*{Special Signs.}
+%
+You may need to use special signs.  The available ones are listed in the
+{\em \LaTeX{} User's Guide \& Reference Manual\/} by Leslie Lamport,
+pp.~44\,ff.
+We have created further symbols for math mode (enclosed in \$):
+\begin{center}
+\begin{tabular}{l@{\hspace{1em}yields\hspace{1em}}
+c@{\hspace{3em}}l@{\hspace{1em}yields\hspace{1em}}c}
+\verb|\grole| & $\grole$ & \verb|\getsto| & $\getsto$\\
+\verb|\lid|   & $\lid$   & \verb|\gid|    & $\gid$
+\end{tabular}
+\end{center}
+%
+\subsubsection*{Gothic (Fraktur).}
+%
+If gothic letters are {\it necessary}, please use those of the
+relevant \AmSTeX{} alphabet which are available from the
+American Mathematical Society.
+
+In \LaTeX{} only the following gothic letters are available:
+\verb|$\Re$| yields $\Re$ and \verb|$\Im$| yields $\Im$. These should
+{\it not\/} be used when you need gothic letters for your contribution.
+Use \AmSTeX{} gothic as explained above. For the real and the imaginary
+parts of a complex number within math mode you should use instead:
+\verb|$\rm Re$| (which yields Re) or \verb|$\rm Im$| (which yields Im).
+%
+\subsubsection*{Script.}
+%
+For script capitals use the coding
+\begin{center}
+\begin{tabular}{l@{\hspace{1em}which yields\hspace{1em}}c}
+\verb|$\cal AB$| & $\cal AB$
+\end{tabular}
+\end{center}
+(see p.~43 of  the \LaTeX{} book).
+%
+\subsubsection*{Special Roman.}
+%
+If you need other symbols than those below, you could use
+the blackboard bold characters of \AmSTeX{},  but there might arise
+capacity problems
+in loading additional \AmSTeX{} fonts. Therefore  we created
+the blackboard bold characters listed below.
+Some of them are not esthetically
+satisfactory. This need not deter you from using them:
+in the final printed form they will be
+replaced by the well-designed MT (monotype) characters of
+the phototypesetting machine.
+\begin{flushleft}
+\begin{tabular}{@{}ll@{ yields }
+c@{\hspace{1.1em}}ll@{ yields }c}
+\verb|\bbbc| & (complex numbers)   & $\bbbc$
+  & \verb|\bbbf| & (blackboard bold F) & $\bbbf$\\
+\verb|\bbbh| & (blackboard bold H) & $\bbbh$
+  & \verb|\bbbk| & (blackboard bold K) & $\bbbk$\\
+\verb|\bbbm| & (blackboard bold M) & $\bbbm$
+  & \verb|\bbbn| & (natural numbers N) & $\bbbn$\\
+\verb|\bbbp| & (blackboard bold P) & $\bbbp$
+  & \verb|\bbbq| & (rational numbers)  & $\bbbq$\\
+\verb|\bbbr| & (real numbers)      & $\bbbr$
+  & \verb|\bbbs| & (blackboard bold S) & $\bbbs$\\
+\verb|\bbbt| & (blackboard bold T) & $\bbbt$
+  & \verb|\bbbz| & (whole numbers)     & $\bbbz$\\
+\verb|\bbbone| & (symbol one)      & $\bbbone$
+\end{tabular}
+\end{flushleft}
+\begin{displaymath}
+\begin{array}{c}
+\bbbc^{\bbbc^{\bbbc}} \otimes
+\bbbf_{\bbbf_{\bbbf}} \otimes
+\bbbh_{\bbbh_{\bbbh}} \otimes
+\bbbk_{\bbbk_{\bbbk}} \otimes
+\bbbm^{\bbbm^{\bbbm}} \otimes
+\bbbn_{\bbbn_{\bbbn}} \otimes
+\bbbp^{\bbbp^{\bbbp}}\\[2mm]
+\otimes
+\bbbq_{\bbbq_{\bbbq}} \otimes
+\bbbr^{\bbbr^{\bbbr}} \otimes
+\bbbs^{\bbbs_{\bbbs}} \otimes
+\bbbt^{\bbbt^{\bbbt}} \otimes
+\bbbz \otimes
+\bbbone^{\bbbone_{\bbbone}}
+\end{array}
+\end{displaymath}
+%
+\subsubsection*{Sans Serif.}
+%
+Using our macros you can also choose this font family;
+use the command \verb|\sf| for {\sf sans serif}
+(like \verb|\it| for {\it italic style}).
+%
+\section{References}
+\label{refer}
+%
+There are three reference systems available; only one, of course,
+should be used for your contribution. With each system (by
+number only, by letter-number or by author-year) a reference list
+containing all citations in the
+text, should be included at the end of your contribution placing the
+\LaTeX{} environment \verb|thebibliography| there.
+For an overall information on that environment
+see the {\em \LaTeX{} User's Guide \& Reference
+Manual\/} by Leslie Lamport, p.~73.
+%
+\subsection{References by Letter-Number or by Number Only}
+%
+References are cited in the text -- using the \verb|\cite|
+command of \LaTeX{} -- by number or by letter-number in square
+brackets, e.g.\ [1] or [E1, S2], [P1], according to your use of the
+\verb|\bibitem| command in the \verb|thebibliography| environment. The
+coding is as follows: if you choose your own label for the sources by
+giving an optional argument to the \verb|\bibitem| command the citations
+in the text are marked with the label you supplied. Otherwise a simple
+numbering is done, which is preferred.
+\begin{verbatim}
+The results in this section are a refined version
+of \cite{clar:eke}; the minimality result of Proposition~14
+was the first of its kind.
+\end{verbatim}
+The above input produces the citation: ``\dots\ refined version of
+[CE1]; the min\-i\-mality\dots''. Then the \verb|\bibitem| entry of
+the \verb|thebibliography| environment should read:
+\begin{verbatim}
+\begin{thebibliography}{[MT1]}
+.
+.
+\bibitem[CE1]{clar:eke}
+Clarke, F., Ekeland, I.:
+Nonlinear oscillations and boundary-value problems for
+Hamiltonian systems.
+Arch. Rat. Mech. Anal. {\bf 78} (1982) 315--333
+.
+.
+\end{thebibliography}
+\end{verbatim}
+The complete bibliography looks like this:
+%
+\begin{thebibliography}{[MT1]}
+%
+\bibitem[CE1]{clar:eke}
+Clarke, F., Ekeland, I.:
+Nonlinear oscillations and
+boundary-value problems for Hamiltonian systems.
+Arch. Rat. Mech. Anal. {\bf 78} (1982) 315--333
+%
+\bibitem[CE2]{clar:eke:2}
+Clarke, F., Ekeland, I.:
+Solutions p\'{e}riodiques, du
+p\'{e}riode donn\'{e}e, des \'{e}quations hamiltoniennes.
+Note CRAS Paris {\bf 287} (1978) 1013--1015
+%
+\bibitem[MT1]{mich:tar}
+Michalek, R., Tarantello, G.:
+Subharmonic solutions with prescribed minimal
+period for nonautonomous Hamiltonian systems.
+J. Diff. Eq. {\bf 72} (1988) 28--55
+%
+\bibitem[Ta1]{tar}
+Tarantello, G.:
+Subharmonic solutions for Hamiltonian
+systems via a $\bbbz_{p}$ pseudoindex theory.
+Annali di Matematica Pura (to appear)
+%
+\bibitem[Ra1]{rab}
+Rabinowitz, P.:
+On subharmonic solutions of a Hamiltonian system.
+Comm. Pure Appl. Math. {\bf 33} (1980) 609--633
+\end{thebibliography}
+%
+\subsubsection*{Number-Only System.}
+%
+For this preferred system do not use the optional argument
+in the \verb|\bibitem| command: then, only numbers will
+appear for the citations in the text (enclosed in square brackets)
+as well as for the marks in your
+bibliography (here the number is only end-punctuated without
+square brackets).
+\begin{verbatim}
+\begin{thebibliography}{1}
+\bibitem {clar:eke}
+Clarke, F., Ekeland, I.:
+Nonlinear oscillations and boundary-value problems for
+Hamiltonian systems.
+Arch. Rat. Mech. Anal. {\bf 78} (1982) 315--333
+\end{thebibliography}
+\end{verbatim}
+%
+\subsection{Author-Year System}
+%
+References are cited in the text by name and year in parentheses
+and should look as follows:
+(Smith 1970, 1980), (Ekeland et al. 1985, Theorem 2), (Jones and Jaffe
+1986; Farrow 1988, Chap.\,2). If the name is part of the sentence
+only the year may appear in parentheses,
+e.g.\ Ekeland et al. (1985, Sect.\,2.1)
+The reference list should contain all citations occurring in the text,
+ordered alphabetically by surname (with initials following). If there
+are several works by the same author(s) the references should be listed
+in the appropriate order indicated below:
+\begin{alpherate}
+\setlength{\hfuzz}{5pt}
+\item
+One author: list works chronologically;
+\item
+Author and same co-author(s): list works chronologically;
+\item
+Author and different co-authors: list works alphabetically
+according to co-authors.
+\end{alpherate}
+If there are several works by the same author(s) and in the same year,
+but which are cited separately, they should be distinguished by the use
+of ``a'', ``b'' etc., e.g.\ (Smith 1982a), (Ekeland et al. 1982b).
+%
+\subsubsection*{How to Code Author-Year System.}
+%
+If you want to use this system you have to specify in
+\verb|documentstyle| the option \verb|[citeauthoryear]|, like:
+\begin{verbatim}
+\documentstyle[citeauthoryear]{llncs}
+\end{verbatim}
+Write your citations in the text explicitly except for the year, leaving
+that up to \LaTeX{} with the \verb|\cite| command. Then give only the
+appropriate year as the optional argument (i.e. the label in square
+brackets) with the \verb|\bibitem| command(s).\\[2mm]
+{\it Sample Input}
+\begin{verbatim}
+The results in this section are a refined version
+of Clarke and Ekeland (\cite{clar:eke}); the minimality result of
+Proposition~14 was the first of its kind.
+\end{verbatim}
+The above input produces the citation: ``\dots\ refined version of
+Clarke and Ekeland (1982); the minimality\dots''. Then the
+\verb|\bibitem|
+entry of the \verb|thebibliography| environment should read:
+\begin{verbatim}
+\begin{thebibliography}{}  % (do not forget {})
+.
+.
+\bibitem[1982]{clar:eke}
+Clarke, F., Ekeland, I.:
+Nonlinear oscillations and boundary-value problems for
+Hamiltonian systems.
+Arch. Rat. Mech. Anal. {\bf 78} (1982) 315--333
+.
+.
+\end{thebibliography}
+\end{verbatim}
+{\it Sample Output}
+\bibauthoryear
+%
+\end{document}

@@ -1,0 +1,45 @@
+\begin{vdm}{\small\sf class} $Expert$
+\par
+\kInstanceVarDef
+\parlinebr
+\begin{insvar}
+\assdef{quali}{\setof{Qualification}}
+\end{insvar}
+\begin{instinvfn}
+\fnapply{ExpertInv}{quali}\end{instinvfn}
+\par
+\end{vdm}
+\begin{vdm}
+\kFunctions
+\begin{fn}[e]{ExpertInv}%
+\signature{\setof{Qualification} \To \Bool }
+\parms*{\Lp s\Rp }
+\annlab[o]{Expert`ExpertInv}
+s \Neq \set{}
+\end{fn}
+\end{vdm}
+\begin{vdm}
+\kTypes
+\type{\kw{public}\kw{ }Qualification}{\const{Mech} | \const{Chem} | \const{Bio} | \const{Elec}}
+\end{vdm}
+\begin{vdm}
+\kOperations
+\kw{\kw{public}}\begin{op}[e]{Expert}%
+\signature{\setof{Qualification} \Oto Expert}
+\parms{qs}
+\annlab[o]{Expert`Expert}
+\ass{quali}{qs}
+\begin{precond}
+\fnapply{ExpertInv}{qs}
+\end{precond};
+\end{op}
+\end{vdm}
+\begin{vdm}
+\kw{\kw{public}}\begin{op}[e]{GetQuali}%
+\signature{() \Oto \setof{Qualification}}
+\parms{}
+\annlab[o]{Expert`GetQuali}
+\return{quali}
+\end{op}
+{\small\sf end} {\it Expert}
+\end{vdm}

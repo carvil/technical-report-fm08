@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1}Introduction}{4}
+\contentsline {section}{\numberline {2}How to Proceed}{4}
+\contentsline {subsection}{\numberline {2.1}How to Invoke the LLNCS Style File}{4}
+\contentsline {subsection}{\numberline {2.2}Contributions Already Coded with \LaTeX {} without the \\ LLNCS Style File}{5}
+\contentsline {section}{\numberline {3}General Rules for Coding Formulas}{5}
+\contentsline {subsection}{\numberline {3.1}Italic and Roman Type in Math Mode}{6}
+\contentsline {section}{\numberline {4}How to Edit Your Input (Source) File}{6}
+\contentsline {subsection}{\numberline {4.1}Headings}{6}
+\contentsline {subsection}{\numberline {4.2}Capitalization and Non-capitalization}{6}
+\contentsline {subsection}{\numberline {4.3}Abbreviation of Words}{7}
+\contentsline {section}{\numberline {5}How to Code the Beginning of Your Contribution}{7}
+\contentsline {section}{\numberline {6}How to Code Your Text}{8}
+\contentsline {paragraph}{Notes and Comments.}{13}
+\contentsline {section}{\numberline {7}Fine Tuning of the Text}{14}
+\contentsline {section}{\numberline {8}Special Typefaces}{14}
+\contentsline {section}{\numberline {9}Footnotes}{14}
+\contentsline {section}{\numberline {10}Lists}{15}
+\contentsline {section}{\numberline {11}Figures}{15}
+\contentsline {section}{\numberline {12}Tables}{16}
+\contentsline {subsection}{\numberline {12.1}Tables Coded with \LaTeX {}}{16}
+\contentsline {subsection}{\numberline {12.2}Tables Not Coded with \LaTeX {}}{17}
+\contentsline {subsection}{\numberline {12.3}Signs and Characters}{18}
+\contentsline {section}{\numberline {13}References}{19}
+\contentsline {subsection}{\numberline {13.1}References by Letter-Number or by Number Only}{19}
+\contentsline {subsection}{\numberline {13.2}Author-Year System}{20}

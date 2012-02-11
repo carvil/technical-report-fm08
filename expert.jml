@@ -1,0 +1,15 @@
+//@ model import org.jmlspecs.models.JMLValueSet;
+import java.util.Set;
+
+public class Expert{
+
+ //@ public model JMLValueSet quali;
+ /*@ public invariant
+   @   !quali.isEmpty();
+   @*/
+
+ //@ requires !q.isEmpty();
+ public Expert(Set q);
+	
+ public Set getQuali();
+}

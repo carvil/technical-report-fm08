@@ -1,0 +1,189 @@
+This is pdfTeX, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2007.12.19)  5 FEB 2008 12:19
+entering extended mode
+**llncs.tex
+(./llncs.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
+erman, danish, esperanto, spanish, catalan, galician, estonian, farsi, finnish,
+ french, greek, monogreek, ancientgreek, croatian, hungarian, interlingua, ibyc
+us, indonesian, icelandic, italian, latin, mongolian, dutch, norsk, polish, por
+tuguese, pinyin, romanian, russian, slovenian, uppersorbian, serbian, swedish, 
+turkish, ukenglish, ukrainian, loaded.
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/latex209.def
+File: latex209.def 1998/05/13 v0.52 Standard LaTeX file
+
+
+          Entering LaTeX 2.09 COMPATIBILITY MODE
+ *************************************************************
+    !!WARNING!!    !!WARNING!!    !!WARNING!!    !!WARNING!!   
+ 
+ This mode attempts to provide an emulation of the LaTeX 2.09
+ author environment so that OLD documents can be successfully
+ processed. It should NOT be used for NEW documents!
+ 
+ New documents should use Standard LaTeX conventions and start
+ with the \documentclass command.
+ 
+ Compatibility mode is UNLIKELY TO WORK with LaTeX 2.09 style
+ files that change any internal macros, especially not with
+ those that change the FONT SELECTION or OUTPUT ROUTINES.
+ 
+ Therefore such style files MUST BE UPDATED to use
+          Current Standard LaTeX: LaTeX2e.
+ If you suspect that you may be using such a style file, which
+ is probably very, very old by now, then you should attempt to
+ get it updated by sending a copy of this error message to the
+ author of that file.
+ *************************************************************
+
+\footheight=\dimen102
+\@maxsep=\dimen103
+\@dblmaxsep=\dimen104
+\@cla=\count79
+\@clb=\count80
+\mscount=\count81
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/tracefnt.sty
+Package: tracefnt 1997/05/29 v3.0j Standard LaTeX package (font tracing)
+\tracingfonts=\count82
+LaTeX Info: Redefining \selectfont on input line 101.
+)
+\symbold=\mathgroup4
+\symsans=\mathgroup5
+\symtypewriter=\mathgroup6
+\symitalic=\mathgroup7
+\symsmallcaps=\mathgroup8
+\symslanted=\mathgroup9
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 293.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 294.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 295.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 301.
+LaTeX Info: Redefining \em on input line 311.
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 375.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 377.
+LaTeX Font Info:    Redeclaring math delimiter \bracevert on input line 379.
+)
+Compatibility mode: loading llncs.sty rather than llncs.cls.
+ (./llncs.sty
+Document Style `llncs', <version 1.2>
+\c@part=\count83
+\c@section=\count84
+\c@subsection=\count85
+\c@subsubsection=\count86
+\c@paragraph=\count87
+\c@figure=\count88
+\c@table=\count89
+\c@@inst=\count90
+\c@@auth=\count91
+\c@theorem=\count92
+\c@example=\count93
+) (./llncsdoc.sty) (./llncs.aux)
+\openout1 = `llncs.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+
+Overfull \hbox (15.00002pt too wide) in paragraph at lines 9--11
+[][]
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 12.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 12.
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) [1
+
+{/usr/local/gwTeX/texmf.local/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 66.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 66.
+ [2] (./llncs.toc)
+\tf@toc=\write3
+\openout3 = `llncs.toc'.
+
+ [3]
+
+LaTeX Warning: Reference `contbegin' on page 4 undefined on input line 88.
+
+
+LaTeX Warning: Reference `refer' on page 4 undefined on input line 97.
+
+
+LaTeX Warning: Reference `refedit' on page 4 undefined on input line 104.
+
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 137.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 137.
+[4] [5] [6] [7]
+
+LaTeX Warning: Reference `samppage' on page 8 undefined on input line 365.
+
+
+Overfull \hbox (14.20988pt too wide) in paragraph at lines 367--371
+[]\OT1/cmr/m/n/10 Then the ab-stract should fol-low. Please re-fer to the demon
+-stra-tion file \OT1/cmtt/m/n/10 llncs.dem
+ []
+
+[8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21]
+(./llncs.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right o
+n input line 1107.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 520 strings out of 94073
+ 5406 string characters out of 1163498
+ 2053133 words of memory out of 4504329
+ 3839 multiletter control sequences out of 10000+50000
+ 18948 words of font info for 69 fonts, out of 2000000 for 2000
+ 645 hyphenation exceptions out of 5000
+ 22i,14n,22p,241b,363s stack positions out of 5000i,500n,6000p,200000b,50000s
+</usr/local/gwTeX/texmf.texlive/fonts/type1/bluesky/cm/cmbsy10.pfb></usr/loca
+l/gwTeX/texmf.texlive/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/gwTeX/texmf
+.texlive/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/gwTeX/texmf.texlive/font
+s/type1/bluesky/cm/cmbx7.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1/bluesk
+y/cm/cmbx9.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1/bluesky/cm/cmex10.pf
+b></usr/local/gwTeX/texmf.texlive/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local
+/gwTeX/texmf.texlive/fonts/type1/bluesky/cm/cmmi6.pfb></usr/local/gwTeX/texmf.t
+exlive/fonts/type1/bluesky/cm/cmmi7.pfb></usr/local/gwTeX/texmf.texlive/fonts/t
+ype1/bluesky/cm/cmr10.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1/bluesky/c
+m/cmr5.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1/bluesky/cm/cmr6.pfb></us
+r/local/gwTeX/texmf.texlive/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/gwTeX/t
+exmf.texlive/fonts/type1/bluesky/cm/cmr9.pfb></usr/local/gwTeX/texmf.texlive/fo
+nts/type1/bluesky/cm/cmsl10.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1/blu
+esky/cm/cmss10.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1/bluesky/cm/cmss9
+.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1/bluesky/cm/cmsy10.pfb></usr/lo
+cal/gwTeX/texmf.texlive/fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/gwTeX/texm
+f.texlive/fonts/type1/bluesky/cm/cmti10.pfb></usr/local/gwTeX/texmf.texlive/fon
+ts/type1/bluesky/cm/cmti7.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1/blues
+ky/cm/cmti9.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1/bluesky/cm/cmtt10.p
+fb>
+Output written on llncs.pdf (21 pages, 198522 bytes).
+PDF statistics:
+ 162 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
